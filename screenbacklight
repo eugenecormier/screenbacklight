@@ -3,7 +3,7 @@
 #################################################################
 #           Screen backlight changer
 #              Coded by Eugene Cormier
-#               June 2017
+#               June 2020
 #
 #   your backlight in /sys/class must be writable
 #   by your user
@@ -15,9 +15,9 @@
 import os,sys,subprocess
 
 # variables
-interface='/sys/class/backlight/intel_backlight/brightness'
+interface='/sys/class/backlight/amdgpu_bl0/brightness'
 steps=8
-maxvalue=825
+maxvalue=255
 config = [interface,steps,maxvalue]
 
 # read config in from file
